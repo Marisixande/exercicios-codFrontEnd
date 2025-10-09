@@ -4,4 +4,4 @@
 // alert( `Olá ${nome}!, sejá bem vindo ao meu site! `)
 
 
-alert('Eu estou estudando s')
+// alert('Eu estou estudando s')
