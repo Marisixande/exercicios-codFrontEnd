@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios DOM - getElementsByClassName</title>
+    <style>
+      .destaque {
+        background-color: yellow;
+      }
+      .borda-azul {
+        border: 2px solid blue;
+      }
+      .invisivel {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercícios Práticos com getElementsByClassName</h1>
+
+    <section id="secao-1">
+      <h2>Seção 1</h2>
+      <p class="paragrafo-geral">Este é o primeiro parágrafo.</p>
+      <p class="paragrafo-geral item-importante">
+        Este é o segundo parágrafo, e ele é importante.
+      </p>
+      <div>
+        <span class="paragrafo-geral">Um span com a mesma classe.</span>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="secao-2">
+      <h2>Itens para Contagem</h2>
+      <ul>
+        <li class="item-lista">Maçã</li>
+        <li class="item-lista">Banana</li>
+        <li>Laranja</li>
+        <li class="item-lista">Morango</li>
+      </ul>
+      <p>
+        Total de itens com a classe 'item-lista':
+        <strong id="total-itens">0</strong>
+      </p>
+    </section>
+
+    <hr />
+
+    <div id="container-cartoes">
+      <h2>Cartões de Produto</h2>
+      <div class="cartao" data-produto-id="001">Produto A</div>
+      <div class="cartao" data-produto-id="002">Produto B</div>
+      <div class="cartao" data-produto-id="003">Produto C</div>
+    </div>
+
+    <button id="btn-adicionar">Adicionar Novo Cartão</button>
+
+    <script src="/js/class.js"></script>
+  </body>
+</html>
