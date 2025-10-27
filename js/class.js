@@ -1,6 +1,7 @@
 // Exercícios Práticos: Manipulação do DOM com `getElementsByClassName`
 // ############
 const paragrafoAzul = document.getElementsByClassName("paragrafo-geral");
+const secaoDois = document.getElementById("secao-2")
 const itemLista = document.getElementsByClassName("item-lista");
 const totalLista = document.getElementById("total-itens");
 const itemImportante = document.getElementsByClassName("paragrafo-geral item-importante")
@@ -37,10 +38,18 @@ for (cc of clikCartao) {
     cc.addEventListener("click", function () {
         alert("Cartão clicado!")
     })
-    cc.addEventListener("mouseover" && "mouseout", function () {
-        element.classList.toggle("borda-azul")
-    })
 }
+
+for (cc of clikCartao) {
+    cc.addEventListener("mouseover", function () {
+        cc.classList.add("borda-azul")
+    });
+    cc.addEventListener("mouseout", function () {
+        cc.classList.remove("borda-azul")
+    });
+}
+
+
 // ############
 // exercício 7: Para cada elemento com a classe `cartao`, leia o valor do atributo `data-produto-id` e exiba no console.
 for (valor of clikCartao) {
@@ -59,5 +68,8 @@ btnAdcionar.addEventListener("click", function () {
 })
 // ############
 // exercício 9: Selecione todos os elementos com a classe `item-lista` e transforme o texto interno em `<em>texto</em>`.
-    itemLista.innerText= ('<em>texto</em>');
+
+for (il of itemLista) {
+    il.innerHTML = `<em>texto</em>`
+}
 // ############
