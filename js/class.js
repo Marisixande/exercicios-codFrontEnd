@@ -33,6 +33,7 @@ for (verm of secaoUm && paragrafoAzul) {
 }
 // ############
 // exercício 6: Encontre todos os elementos com a classe `cartao`. Adicione um evento de `click` a cada um deles que exiba um `alert("Cartão clicado!")`.
+
 // exercício 10: Adicione eventos `mouseover` e `mouseout` aos elementos com a classe `cartao` para adicionar/remover a classe `borda-azul`.
 for (cc of clikCartao) {
     cc.addEventListener("click", function () {
@@ -40,13 +41,16 @@ for (cc of clikCartao) {
     })
 }
 
-for (cc of clikCartao) {
-    cc.addEventListener("mouseover", function () {
-        cc.classList.add("borda-azul")
-    });
-    cc.addEventListener("mouseout", function () {
-        cc.classList.remove("borda-azul")
-    });
+// for (let index = 0; index < clikCartao.length; index++) {
+//     const element = clikCartao[index];
+//     element.addEventListener("click", function () {
+//         alert("Cartão clicado!")
+//     })
+// }
+
+for (let cc of clikCartao) {
+    cc.addEventListener("mouseover", () => { cc.classList.add("borda-azul") });
+    cc.addEventListener("mouseout", () => { cc.classList.remove("borda-azul") });
 }
 
 
@@ -62,7 +66,7 @@ console.log(clikCartao.length);
 btnAdcionar.addEventListener("click", function () {
     const cartoesNovos = document.createElement("div");
     cartoesNovos.textContent = ("Produto novo");
-    cartoesNovos.classList.add("cartao")
+    cartoesNovos.className = ("cartao")
     contCartao.appendChild(cartoesNovos);
     console.log(clikCartao.length);
 })
